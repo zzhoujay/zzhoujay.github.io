@@ -166,7 +166,7 @@
             
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -176,7 +176,7 @@
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -242,7 +242,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-04-29T10:37:37+08:00" content="2016-04-29">
               2016-04-29
             </time>
@@ -329,6 +329,22 @@
 <li>一个数减去1后会导致最右边的1变成0，然后和自身做与运算即可达到去掉最右边的1的效果</li>
 </ol>
 <h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Solution8 &#123;</span><br><span class="line">    public int NumberOf1(int n) &#123;</span><br><span class="line">        int count = 0;</span><br><span class="line">        while (n != 0) &#123;</span><br><span class="line">            count++;</span><br><span class="line">            n = n &amp; (n - 1);</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><h3 id="题目描叙-5"><a href="#题目描叙-5" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>输入一个链表，反转链表后，输出链表的所有元素。</p>
+<h3 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h3><p>反转要保留下一个节点的指针防止链表断开</p>
+<h3 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution9 &#123;</span><br><span class="line">       public ListNode ReverseList(ListNode head) &#123;</span><br><span class="line">           ListNode curr = head, pre = null;</span><br><span class="line">           while (curr != null) &#123;</span><br><span class="line">               ListNode next = curr.next;</span><br><span class="line">               if (next == null) &#123;</span><br><span class="line">                   head = curr;</span><br><span class="line">               &#125;</span><br><span class="line">               curr.next = pre;</span><br><span class="line">               pre = curr;</span><br><span class="line">               curr = next;</span><br><span class="line">           &#125;</span><br><span class="line">           return head;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="合并两个排序的链表"><a href="#合并两个排序的链表" class="headerlink" title="合并两个排序的链表"></a>合并两个排序的链表</h1><h3 id="题目描叙-6"><a href="#题目描叙-6" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。</p>
+<h3 id="代码-8"><a href="#代码-8" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution10 &#123;</span><br><span class="line">        public ListNode Merge(ListNode list1, ListNode list2) &#123;</span><br><span class="line">            if (list1 == null) &#123;</span><br><span class="line">                return list2;</span><br><span class="line">            &#125;</span><br><span class="line">            if (list2 == null) &#123;</span><br><span class="line">                return list1;</span><br><span class="line">            &#125;</span><br><span class="line">            ListNode node = new ListNode(0), head = node;</span><br><span class="line">            while (list1 != null || list2 != null) &#123;</span><br><span class="line">                if (list2 == null) &#123;</span><br><span class="line">                    node.next = list1;</span><br><span class="line">                    list1 = list1.next;</span><br><span class="line">                &#125; else if (list1 == null) &#123;</span><br><span class="line">                    node.next = list2;</span><br><span class="line">                    list2 = list2.next;</span><br><span class="line">                &#125; else if (list1.val &lt; list2.val) &#123;</span><br><span class="line">                    node.next = list1;</span><br><span class="line">                    list1 = list1.next;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    node.next = list2;</span><br><span class="line">                    list2 = list2.next;</span><br><span class="line">                &#125;</span><br><span class="line">                node = node.next;</span><br><span class="line">            &#125;</span><br><span class="line">            return head.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="树的子结构"><a href="#树的子结构" class="headerlink" title="树的子结构"></a>树的子结构</h1><h3 id="题目描叙-7"><a href="#题目描叙-7" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>输入两颗二叉树A，B，判断B是不是A的子结构。</p>
+<h3 id="思路-7"><a href="#思路-7" class="headerlink" title="思路"></a>思路</h3><p>先在root1中找到root2的根节点，然后对比这两个节点结构是否一致</p>
+<h3 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution11 &#123;</span><br><span class="line">    public boolean HasSubtree(TreeNode root1, TreeNode root2) &#123;</span><br><span class="line">        if (root1 == null || root2 == null) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        boolean result = false;</span><br><span class="line">        if (root1.val == root2.val) &#123;</span><br><span class="line">            result = isContainer(root1, root2);</span><br><span class="line">        &#125;</span><br><span class="line">        if (!result) &#123;</span><br><span class="line">            result = isContainer(root1.left, root2);</span><br><span class="line">        &#125;</span><br><span class="line">        if (!result) &#123;</span><br><span class="line">            result = isContainer(root1.right, root2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static boolean isContainer(TreeNode root1, TreeNode root2) &#123;</span><br><span class="line">        return root2 == null || root1 != null &amp;&amp; root1.val == root2.val &amp;&amp; isContainer(root1.left, root2.left) &amp;&amp; isContainer(root1.right, root2.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="二叉树的镜像"><a href="#二叉树的镜像" class="headerlink" title="二叉树的镜像"></a>二叉树的镜像</h1><h3 id="题目描叙-8"><a href="#题目描叙-8" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>操作给定的二叉树，将其变换为源二叉树的镜像。</p>
+<h3 id="代码-10"><a href="#代码-10" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution12 &#123;</span><br><span class="line">    public void Mirror(TreeNode root) &#123;</span><br><span class="line">        if (root == null) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode temp = root.left;</span><br><span class="line">        root.left = root.right;</span><br><span class="line">        root.right = temp;</span><br><span class="line"></span><br><span class="line">        Mirror(root.left);</span><br><span class="line">        Mirror(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="包含min函数的栈"><a href="#包含min函数的栈" class="headerlink" title="包含min函数的栈"></a>包含min函数的栈</h1><h3 id="题目描叙-9"><a href="#题目描叙-9" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。</p>
+<h3 id="思路-8"><a href="#思路-8" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>push时将最小值push到minStack</li>
+<li>pop时若是pop的是最小值则将minStack也pop</li>
+</ol>
+<h3 id="代码-11"><a href="#代码-11" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class Solution13 &#123;</span><br><span class="line"></span><br><span class="line">        private Stack&lt;Integer&gt; dataStack = new Stack&lt;&gt;();</span><br><span class="line">        private Stack&lt;Integer&gt; minStack = new Stack&lt;&gt;();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        public void push(int node) &#123;</span><br><span class="line">            dataStack.push(node);</span><br><span class="line">            if (minStack.isEmpty() || node &lt; minStack.peek()) &#123;</span><br><span class="line">                minStack.push(node);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public void pop() &#123;</span><br><span class="line">            int value = dataStack.pop();</span><br><span class="line">            if(value==minStack.peek())&#123;</span><br><span class="line">                minStack.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public int top() &#123;</span><br><span class="line">            return dataStack.peek();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public int min() &#123;</span><br><span class="line">            return minStack.peek();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p><em>by zzhoujay</em></p>
 
           
@@ -400,7 +416,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -410,7 +426,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -474,7 +490,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
