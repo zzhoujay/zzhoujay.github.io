@@ -166,7 +166,7 @@
             
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -176,7 +176,7 @@
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -229,6 +229,126 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/01/Android面试知识点集锦/" itemprop="url">
+                  Android面试知识点集锦
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-01T11:44:45+08:00" content="2016-05-01">
+              2016-05-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h2><h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><ol>
+<li>Activity用于前台交互，通常包含一个窗口</li>
+<li>Activity之间通过Intent进行通信</li>
+<li>android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity</li>
+</ol>
+<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><ol>
+<li>Service用于在执行后台任务（仍然是运行在主线程上的）</li>
+<li>开发人员需要在应用程序配置文件中声明全部的service，使用<code>&lt;service&gt;&lt;/service&gt;</code>标签。</li>
+<li>Service通常位于后台运行，它一般不需要与用户交互，因此Service组件没有图形用户界面。Service组件需要继承Service基类。Service组件通常用于为其他组件提供后台服务或监控其他组件的运行状态。</li>
+<li>Service用start和bind两种模式</li>
+</ol>
+<h3 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h3><ol>
+<li>用于接受来自外界的广播</li>
+<li>广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。</li>
+<li>动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。</li>
+</ol>
+<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><ol>
+<li>内容提供者，使一个应用程序的指定数据集提供给其他应用程序，其他应用可以通过ContentResolver类从该内容提供者中获取或存入数据</li>
+<li>只有需要在多个应用程序间共享数据是才需要内容提供者</li>
+<li>ContentProvider实现数据共享</li>
+<li>开发人员不会直接使用ContentProvider类的对象，大多数是通过ContentResolver对象实现对ContentProvider的操作</li>
+<li>ContentProvider使用URI来唯一标识其数据集，这里的URI以content://作为前缀，表示该数据由ContentProvider来管理</li>
+</ol>
+<h2 id="Handler机制"><a href="#Handler机制" class="headerlink" title="Handler机制"></a>Handler机制</h2><h3 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h3><p>通过Handler向消息队列添加消息</p>
+<h3 id="Looper"><a href="#Looper" class="headerlink" title="Looper"></a>Looper</h3><p>一个线程只能有一个Looper，子线程需要自己创建自己的Looper，Looper启动后会进入一个死循环，不断的从消息队列中取出消息交由Handler处理</p>
+<h3 id="MessageQueue"><a href="#MessageQueue" class="headerlink" title="MessageQueue"></a>MessageQueue</h3><p>消息队列中包含添加进去点的所有消息，由Looper来调度</p>
+<p><a href="https://github.com/zzhoujay" target="_blank" rel="external"><em>by zzhoujay</em></a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/30/Java面试知识点集锦/" itemprop="url">
                   Java面试知识点集锦
                 </a>
@@ -242,7 +362,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-04-30T22:59:08+08:00" content="2016-04-30">
               2016-04-30
             </time>
@@ -282,7 +402,53 @@
 <li>只能用引用调用其引用类型中定义的方法</li>
 <li>运行时，根据对象的实际类型去找子类覆盖之后的方法</li>
 </ol>
-<p><em>by zzhoujay</em></p>
+<h2 id="抽象类和接口的异同"><a href="#抽象类和接口的异同" class="headerlink" title="抽象类和接口的异同"></a>抽象类和接口的异同</h2><h3 id="同"><a href="#同" class="headerlink" title="同"></a>同</h3><ol>
+<li>都可以有抽象的方法</li>
+<li>都不能直接实例化，只能依托与实现了其抽象方法的子类来实例化</li>
+</ol>
+<h3 id="异"><a href="#异" class="headerlink" title="异"></a>异</h3><ol>
+<li>一个类只能继承一个抽象类，但是可以实现多个接口</li>
+<li>抽象类可以有非抽象的方法和属性，而接口不能有非抽象方法（JDK8可以有默认实现），接口也不能有属性，接口是无状态的，而抽象类可以有状态</li>
+<li>类是用来描叙某一类事物的，而接口是用来描叙具有相同功能的一些列东西</li>
+</ol>
+<h2 id="Java中的四中引用"><a href="#Java中的四中引用" class="headerlink" title="Java中的四中引用"></a>Java中的四中引用</h2><h3 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h3><p><code>Object obj=new Object();</code>其中<code>obj</code>就是强引用</p>
+<p>强引用只有被gc标记为可回收才会被回收</p>
+<h3 id="软引用"><a href="#软引用" class="headerlink" title="软引用"></a>软引用</h3><p><code>SoftReference&lt;Object&gt; obj = new SoftReference&lt;&gt;(new Object());</code> 其中<code>obj</code>即为软引用</p>
+<p>软引用在堆内存不足时，就算引用仍然被持有着也会被释放</p>
+<h3 id="弱引用"><a href="#弱引用" class="headerlink" title="弱引用"></a>弱引用</h3><p><code>WeakReference&lt;Object&gt; obj= new WeakReference&lt;&gt;(new Object());</code>  其中<code>obj</code>即为弱引用</p>
+<p>弱引用只要gc在标记时被发现了就会被回收</p>
+<h3 id="虚引用"><a href="#虚引用" class="headerlink" title="虚引用"></a>虚引用</h3><p><code>PhantomReference&lt;Object&gt; obj=new PhantomReference&lt;&gt;(new Object(),null);</code>  其中<code>obj</code>即为虚引用</p>
+<p>虚引用是最弱的一种引用，你甚至无法获取到对象的引用，虚引用可以在任何时候被gc回收</p>
+<h2 id="Java实现线程的几种方式"><a href="#Java实现线程的几种方式" class="headerlink" title="Java实现线程的几种方式"></a>Java实现线程的几种方式</h2><ol>
+<li><p>继承Thread类，并重写run方法</p>
+</li>
+<li><p>实现Runnable接口，并把Runnable的实例作为参数传递给Thread</p>
+</li>
+</ol>
+<h2 id="HashMap原理"><a href="#HashMap原理" class="headerlink" title="HashMap原理"></a>HashMap原理</h2><ul>
+<li>HashMap内部的存储结构是一个Node数组</li>
+<li>Node的包含key、value和指向下一个Node的引用</li>
+<li>put元素时会取key的hashCode并模上当前数组的长度得到下标，存进数组</li>
+<li>若是存进去时发生冲突，Java8之前采用链表解决，Java8采用树的方式解决（效率更高）</li>
+<li>取元素时也是根据hash值得到下标然后取出，若发生冲突则根据上面的不同方式解决</li>
+</ul>
+<h2 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h2><h3 id="为什么要有GC"><a href="#为什么要有GC" class="headerlink" title="为什么要有GC"></a>为什么要有GC</h3><p>Java不能像C++那样显示回收内存，只能通过GC来回收内存</p>
+<h3 id="如何判断对象可被回收"><a href="#如何判断对象可被回收" class="headerlink" title="如何判断对象可被回收"></a>如何判断对象可被回收</h3><p>采用可达性分析的方法，若是对象在Java堆中的一些根对象的引用链上则不能被回收，反之则可以被回收</p>
+<p>根对象一般包括：方法栈中的对象、本地方法栈中的对象、静态变量等等</p>
+<h3 id="回收方法"><a href="#回收方法" class="headerlink" title="回收方法"></a>回收方法</h3><h4 id="标记清除法"><a href="#标记清除法" class="headerlink" title="标记清除法"></a>标记清除法</h4><p>先根据可达性分析对不可达的对象进行标记，经过几次标记后，对象会被gc回收</p>
+<p>回收后会产生大量内存碎片</p>
+<h4 id="复制清除法"><a href="#复制清除法" class="headerlink" title="复制清除法"></a>复制清除法</h4><p>将内存分为两块，把第一块上存活的对象复制到第二块上，并清空第一块，两块内存交替使用</p>
+<p>能够解决回收产生的内存碎片问题，但是不适用与对象存活率较高的情况</p>
+<blockquote>
+<p>一般java堆会分为新生代和老年代，新生代的对象生命周期都比较短，老年代的对象的生命周期比较长，新生代采用复制清除算法，老年代采用标记清除算法，新生代中存活时间长的对象有机会会被转移到老年代</p>
+</blockquote>
+<h3 id="GC种类"><a href="#GC种类" class="headerlink" title="GC种类"></a>GC种类</h3><ol>
+<li><p>Minor GC，回收新生代</p>
+</li>
+<li><p>FullGC，整个Java堆</p>
+</li>
+</ol>
+<p><a href="http://zzhoujay.github.com" target="_blank" rel="external"><em>by zzhoujay</em></a></p>
 
           
         
@@ -345,7 +511,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-04-29T10:37:37+08:00" content="2016-04-29">
               2016-04-29
             </time>
@@ -461,6 +627,20 @@
 <li>判断序列是否满足这个规则</li>
 </ol>
 <h3 id="代码-14"><a href="#代码-14" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution16 &#123;</span><br><span class="line">    public boolean VerifySquenceOfBST(int[] sequence) &#123;</span><br><span class="line">        return !(sequence == null || sequence.length == 0) &amp;&amp; VerifySquenceOfBST(sequence, 0, sequence.length - 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public boolean VerifySquenceOfBST(int[] sequence, int start, int end) &#123;</span><br><span class="line">        if (start &gt;= end) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        int root = sequence[end];</span><br><span class="line">        boolean flag = false;</span><br><span class="line">        int position = -1;</span><br><span class="line">        for (int p = end - 1; p &gt;= start; p--) &#123;</span><br><span class="line">            if (!flag) &#123;</span><br><span class="line">                if (sequence[p] &lt; root) &#123;</span><br><span class="line">                    flag = true;</span><br><span class="line">                    position = p;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                if (sequence[p] &gt; root) &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return VerifySquenceOfBST(sequence, start, position) &amp;&amp; VerifySquenceOfBST(sequence, position + 1, end - 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="二叉树中和为某一值的路径"><a href="#二叉树中和为某一值的路径" class="headerlink" title="二叉树中和为某一值的路径"></a>二叉树中和为某一值的路径</h1><h3 id="题目描叙-13"><a href="#题目描叙-13" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。</p>
+<h3 id="思路-12"><a href="#思路-12" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>采用先序遍历</li>
+<li>便利的过程将便利到的节点压入栈中，并在便利过程中携带前面的节点值的和</li>
+<li>到达根节点后判断这条路径的和与target是否一致</li>
+</ol>
+<h3 id="代码-15"><a href="#代码-15" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution17 &#123;</span><br><span class="line">    </span><br><span class="line">    public ArrayList&lt;ArrayList&lt;Integer&gt;&gt; FindPath(TreeNode root, int target) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ps = new ArrayList&lt;&gt;();</span><br><span class="line">        Stack&lt;Integer&gt; path = new Stack&lt;&gt;();</span><br><span class="line">        findPath(root, path, 0, target, ps);</span><br><span class="line">        return ps;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void findPath(TreeNode root, Stack&lt;Integer&gt; path, int sum, int target, ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ps) &#123;</span><br><span class="line">        if (root == null) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        path.push(root.val);</span><br><span class="line">        sum += root.val;</span><br><span class="line">        if (root.left == null &amp;&amp; root.right == null) &#123;</span><br><span class="line">            if (sum == target) &#123;</span><br><span class="line">                ps.add(new ArrayList&lt;&gt;(path));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            findPath(root.left, path, sum, target, ps);</span><br><span class="line">            findPath(root.right, path, sum, target, ps);</span><br><span class="line">        &#125;</span><br><span class="line">        path.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="复杂链表的复制"><a href="#复杂链表的复制" class="headerlink" title="复杂链表的复制"></a>复杂链表的复制</h1><h3 id="题目描叙-14"><a href="#题目描叙-14" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>输入一个复杂链表（每个节点中有节点值，以及两个指针，一个指向下一个节点，另一个特殊指针指向任意一个节点）。</p>
+<h3 id="思路-13"><a href="#思路-13" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>先在每个节点后面接上他们的复制节点（还未复制random指针）</li>
+<li>遍历链表，复制节点的random即指向原节点random指向的节点的下一个节点，注意random为null的情况</li>
+<li>拆分链表</li>
+</ol>
+<h3 id="代码-16"><a href="#代码-16" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution18 &#123;</span><br><span class="line">    public RandomListNode Clone(RandomListNode pHead) &#123;</span><br><span class="line">        if (pHead == null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        RandomListNode p = pHead;</span><br><span class="line">        while (p != null) &#123;</span><br><span class="line">            RandomListNode node = new RandomListNode(p.label);</span><br><span class="line">            node.next = p.next;</span><br><span class="line">            p.next = node;</span><br><span class="line"></span><br><span class="line">            p = node.next;</span><br><span class="line">        &#125;</span><br><span class="line">        p = pHead;</span><br><span class="line">        while (p != null) &#123;</span><br><span class="line">            RandomListNode node = p.next;</span><br><span class="line">            if (p.random != null)</span><br><span class="line">                node.random = p.random.next;</span><br><span class="line">            else</span><br><span class="line">                node.random = null;</span><br><span class="line"></span><br><span class="line">            p = node.next;</span><br><span class="line">        &#125;</span><br><span class="line">        RandomListNode head = pHead.next;</span><br><span class="line">        RandomListNode p2 = head;</span><br><span class="line">        p = pHead;</span><br><span class="line">        while (p != null) &#123;</span><br><span class="line">            p.next = p2.next;</span><br><span class="line">            if (p.next != null)</span><br><span class="line">                p2.next = p.next.next;</span><br><span class="line">            else</span><br><span class="line">                p2.next = null;</span><br><span class="line"></span><br><span class="line">            p = p.next;</span><br><span class="line">            p2 = p2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><em>by zzhoujay</em></p>
 
           
@@ -531,8 +711,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -541,8 +721,8 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -606,7 +786,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
