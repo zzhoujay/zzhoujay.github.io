@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="知识点," />
+  <meta name="keywords" content="练习," />
 
 
 
@@ -80,37 +80,49 @@
 
 
 
-<meta name="description" content="四大组件Activity
-Activity用于前台交互，通常包含一个窗口
-Activity之间通过Intent进行通信
-android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity
+<meta name="description" content="懂二进制题目描叙世界上有10种人，一种懂二进制，一种不懂。那么你知道两个int32整数m和n的二进制表达，有多少个位(bit)不同么？ 
+输入例子
+1999 2299
 
-Service
-Service用于在执行后台任务（仍然是运行在主线程上的）
-开发人员需要在应用程序配置文件中声明全部的servi">
+输出例子
+7
+
+思路
+将着这两个数异或，得到的结果中的1的个数就是原来两个数中位不同的数
+由于一个数减一后与自身相与可以去掉该数中最右边的1，循环该操作至全部1都消去，循环的次数就是即为所求
+
+代码1234567891011121">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android面试知识点集锦">
-<meta property="og:url" content="http://zzhoujay.github.io/2016/05/01/Android面试知识点集锦/index.html">
+<meta property="og:title" content="2016校招编程题练习">
+<meta property="og:url" content="http://zzhoujay.github.io/2016/05/02/2016校招编程题练习/index.html">
 <meta property="og:site_name" content="zzhoujay">
-<meta property="og:description" content="四大组件Activity
-Activity用于前台交互，通常包含一个窗口
-Activity之间通过Intent进行通信
-android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity
+<meta property="og:description" content="懂二进制题目描叙世界上有10种人，一种懂二进制，一种不懂。那么你知道两个int32整数m和n的二进制表达，有多少个位(bit)不同么？ 
+输入例子
+1999 2299
 
-Service
-Service用于在执行后台任务（仍然是运行在主线程上的）
-开发人员需要在应用程序配置文件中声明全部的servi">
-<meta property="og:updated_time" content="2016-05-01T08:07:50.997Z">
+输出例子
+7
+
+思路
+将着这两个数异或，得到的结果中的1的个数就是原来两个数中位不同的数
+由于一个数减一后与自身相与可以去掉该数中最右边的1，循环该操作至全部1都消去，循环的次数就是即为所求
+
+代码1234567891011121">
+<meta property="og:updated_time" content="2016-05-02T15:10:05.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android面试知识点集锦">
-<meta name="twitter:description" content="四大组件Activity
-Activity用于前台交互，通常包含一个窗口
-Activity之间通过Intent进行通信
-android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity
+<meta name="twitter:title" content="2016校招编程题练习">
+<meta name="twitter:description" content="懂二进制题目描叙世界上有10种人，一种懂二进制，一种不懂。那么你知道两个int32整数m和n的二进制表达，有多少个位(bit)不同么？ 
+输入例子
+1999 2299
 
-Service
-Service用于在执行后台任务（仍然是运行在主线程上的）
-开发人员需要在应用程序配置文件中声明全部的servi">
+输出例子
+7
+
+思路
+将着这两个数异或，得到的结果中的1的个数就是原来两个数中位不同的数
+由于一个数减一后与自身相与可以去掉该数中最右边的1，循环该操作至全部1都消去，循环的次数就是即为所求
+
+代码1234567891011121">
 
 
 
@@ -128,7 +140,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
   };
 </script>
 
-  <title> Android面试知识点集锦 | zzhoujay </title>
+  <title> 2016校招编程题练习 | zzhoujay </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -248,7 +260,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
             
             
               
-                Android面试知识点集锦
+                2016校招编程题练习
               
             
           </h1>
@@ -260,8 +272,8 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T11:44:45+08:00" content="2016-05-01">
-              2016-05-01
+            <time itemprop="dateCreated" datetime="2016-05-02T23:04:05+08:00" content="2016-05-02">
+              2016-05-02
             </time>
           </span>
 
@@ -288,32 +300,18 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
       
 
       
-        <h2 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h2><h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><ol>
-<li>Activity用于前台交互，通常包含一个窗口</li>
-<li>Activity之间通过Intent进行通信</li>
-<li>android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity</li>
+        <h1 id="懂二进制"><a href="#懂二进制" class="headerlink" title="懂二进制"></a>懂二进制</h1><h3 id="题目描叙"><a href="#题目描叙" class="headerlink" title="题目描叙"></a>题目描叙</h3><p>世界上有10种人，一种懂二进制，一种不懂。那么你知道两个int32整数m和n的二进制表达，有多少个位(bit)不同么？ </p>
+<h3 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h3><blockquote>
+<p>1999 2299</p>
+</blockquote>
+<h3 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h3><blockquote>
+<p>7</p>
+</blockquote>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>将着这两个数异或，得到的结果中的1的个数就是原来两个数中位不同的数</li>
+<li>由于一个数减一后与自身相与可以去掉该数中最右边的1，循环该操作至全部1都消去，循环的次数就是即为所求</li>
 </ol>
-<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><ol>
-<li>Service用于在执行后台任务（仍然是运行在主线程上的）</li>
-<li>开发人员需要在应用程序配置文件中声明全部的service，使用<code>&lt;service&gt;&lt;/service&gt;</code>标签。</li>
-<li>Service通常位于后台运行，它一般不需要与用户交互，因此Service组件没有图形用户界面。Service组件需要继承Service基类。Service组件通常用于为其他组件提供后台服务或监控其他组件的运行状态。</li>
-<li>Service用start和bind两种模式</li>
-</ol>
-<h3 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h3><ol>
-<li>用于接受来自外界的广播</li>
-<li>广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。</li>
-<li>动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。</li>
-</ol>
-<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><ol>
-<li>内容提供者，使一个应用程序的指定数据集提供给其他应用程序，其他应用可以通过ContentResolver类从该内容提供者中获取或存入数据</li>
-<li>只有需要在多个应用程序间共享数据是才需要内容提供者</li>
-<li>ContentProvider实现数据共享</li>
-<li>开发人员不会直接使用ContentProvider类的对象，大多数是通过ContentResolver对象实现对ContentProvider的操作</li>
-<li>ContentProvider使用URI来唯一标识其数据集，这里的URI以content://作为前缀，表示该数据由ContentProvider来管理</li>
-</ol>
-<h2 id="Handler机制"><a href="#Handler机制" class="headerlink" title="Handler机制"></a>Handler机制</h2><h3 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h3><p>通过Handler向消息队列添加消息</p>
-<h3 id="Looper"><a href="#Looper" class="headerlink" title="Looper"></a>Looper</h3><p>一个线程只能有一个Looper，子线程需要自己创建自己的Looper，Looper启动后会进入一个死循环，不断的从消息队列中取出消息交由Handler处理</p>
-<h3 id="MessageQueue"><a href="#MessageQueue" class="headerlink" title="MessageQueue"></a>MessageQueue</h3><p>消息队列中包含添加进去点的所有消息，由Looper来调度</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public static class Solution1 &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 获得两个整形二进制表达位数不同的数量</span><br><span class="line">     *</span><br><span class="line">     * @param m 整数m</span><br><span class="line">     * @param n 整数n</span><br><span class="line">     * @return 整型</span><br><span class="line">     */</span><br><span class="line">    public int countBitDiff(int m, int n) &#123;</span><br><span class="line">        int r = m ^ n;</span><br><span class="line">        int count = 0;</span><br><span class="line">        while (r != 0) &#123;</span><br><span class="line">            r = r &amp; (r - 1);</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="https://github.com/zzhoujay" target="_blank" rel="external"><em>by zzhoujay</em></a></p>
 
       
@@ -335,7 +333,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
       
         <div class="post-tags">
           
-            <a href="/tags/知识点/" rel="tag">#知识点</a>
+            <a href="/tags/练习/" rel="tag">#练习</a>
           
         </div>
       
@@ -344,17 +342,13 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/30/Java面试知识点集锦/" rel="next" title="Java面试知识点集锦">
-                <i class="fa fa-chevron-left"></i> Java面试知识点集锦
+              <a href="/2016/05/01/Android面试知识点集锦/" rel="next" title="Android面试知识点集锦">
+                <i class="fa fa-chevron-left"></i> Android面试知识点集锦
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/02/2016校招编程题练习/" rel="prev" title="2016校招编程题练习">
-                2016校招编程题练习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -481,7 +475,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#四大组件"><span class="nav-number">1.</span> <span class="nav-text">四大组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity"><span class="nav-number">1.1.</span> <span class="nav-text">Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service"><span class="nav-number">1.2.</span> <span class="nav-text">Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BroadcastReceiver"><span class="nav-number">1.3.</span> <span class="nav-text">BroadcastReceiver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentProvider"><span class="nav-number">1.4.</span> <span class="nav-text">ContentProvider</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handler机制"><span class="nav-number">2.</span> <span class="nav-text">Handler机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Handler"><span class="nav-number">2.1.</span> <span class="nav-text">Handler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Looper"><span class="nav-number">2.2.</span> <span class="nav-text">Looper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MessageQueue"><span class="nav-number">2.3.</span> <span class="nav-text">MessageQueue</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#懂二进制"><span class="nav-number">1.</span> <span class="nav-text">懂二进制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描叙"><span class="nav-number">1.0.1.</span> <span class="nav-text">题目描叙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入例子"><span class="nav-number">1.0.2.</span> <span class="nav-text">输入例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出例子"><span class="nav-number">1.0.3.</span> <span class="nav-text">输出例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.0.4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">1.0.5.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
