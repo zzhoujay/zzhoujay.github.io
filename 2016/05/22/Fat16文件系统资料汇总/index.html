@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="知识点," />
+  <meta name="keywords" content="汇总," />
 
 
 
@@ -80,37 +80,37 @@
 
 
 
-<meta name="description" content="四大组件Activity
-Activity用于前台交互，通常包含一个窗口
-Activity之间通过Intent进行通信
-android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity
-
-Service
-Service用于在执行后台任务（仍然是运行在主线程上的）
-开发人员需要在应用程序配置文件中声明全部的servi">
+<meta name="description" content="FAT16文件系统简介链接
+FAT16文件系统 DBR扇区介绍链接
+FAT表详解—图文详解链接
+FAT16文件结构与组织链接
+FAT16文件系统格式说明链接
+FAT32 数据区_根目录、子目录、目录项链接
+目录项 类别解析链接
+by zzhoujay">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android面试知识点集锦">
-<meta property="og:url" content="http://zzhoujay.github.io/2016/05/01/Android面试知识点集锦/index.html">
+<meta property="og:title" content="Fat16文件系统资料汇总">
+<meta property="og:url" content="http://zzhoujay.github.io/2016/05/22/Fat16文件系统资料汇总/index.html">
 <meta property="og:site_name" content="zzhoujay">
-<meta property="og:description" content="四大组件Activity
-Activity用于前台交互，通常包含一个窗口
-Activity之间通过Intent进行通信
-android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity
-
-Service
-Service用于在执行后台任务（仍然是运行在主线程上的）
-开发人员需要在应用程序配置文件中声明全部的servi">
-<meta property="og:updated_time" content="2016-05-01T08:07:50.997Z">
+<meta property="og:description" content="FAT16文件系统简介链接
+FAT16文件系统 DBR扇区介绍链接
+FAT表详解—图文详解链接
+FAT16文件结构与组织链接
+FAT16文件系统格式说明链接
+FAT32 数据区_根目录、子目录、目录项链接
+目录项 类别解析链接
+by zzhoujay">
+<meta property="og:updated_time" content="2016-05-22T15:38:34.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android面试知识点集锦">
-<meta name="twitter:description" content="四大组件Activity
-Activity用于前台交互，通常包含一个窗口
-Activity之间通过Intent进行通信
-android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity
-
-Service
-Service用于在执行后台任务（仍然是运行在主线程上的）
-开发人员需要在应用程序配置文件中声明全部的servi">
+<meta name="twitter:title" content="Fat16文件系统资料汇总">
+<meta name="twitter:description" content="FAT16文件系统简介链接
+FAT16文件系统 DBR扇区介绍链接
+FAT表详解—图文详解链接
+FAT16文件结构与组织链接
+FAT16文件系统格式说明链接
+FAT32 数据区_根目录、子目录、目录项链接
+目录项 类别解析链接
+by zzhoujay">
 
 
 
@@ -128,7 +128,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
   };
 </script>
 
-  <title> Android面试知识点集锦 | zzhoujay </title>
+  <title> Fat16文件系统资料汇总 | zzhoujay </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -248,7 +248,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
             
             
               
-                Android面试知识点集锦
+                Fat16文件系统资料汇总
               
             
           </h1>
@@ -260,8 +260,8 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-05-01T11:44:45+08:00" content="2016-05-01">
-              2016-05-01
+            <time itemprop="dateCreated" datetime="2016-05-22T23:32:32+08:00" content="2016-05-22">
+              2016-05-22
             </time>
           </span>
 
@@ -288,33 +288,14 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
       
 
       
-        <h2 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h2><h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><ol>
-<li>Activity用于前台交互，通常包含一个窗口</li>
-<li>Activity之间通过Intent进行通信</li>
-<li>android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity</li>
-</ol>
-<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><ol>
-<li>Service用于在执行后台任务（仍然是运行在主线程上的）</li>
-<li>开发人员需要在应用程序配置文件中声明全部的service，使用<code>&lt;service&gt;&lt;/service&gt;</code>标签。</li>
-<li>Service通常位于后台运行，它一般不需要与用户交互，因此Service组件没有图形用户界面。Service组件需要继承Service基类。Service组件通常用于为其他组件提供后台服务或监控其他组件的运行状态。</li>
-<li>Service用start和bind两种模式</li>
-</ol>
-<h3 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h3><ol>
-<li>用于接受来自外界的广播</li>
-<li>广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。</li>
-<li>动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。</li>
-</ol>
-<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><ol>
-<li>内容提供者，使一个应用程序的指定数据集提供给其他应用程序，其他应用可以通过ContentResolver类从该内容提供者中获取或存入数据</li>
-<li>只有需要在多个应用程序间共享数据是才需要内容提供者</li>
-<li>ContentProvider实现数据共享</li>
-<li>开发人员不会直接使用ContentProvider类的对象，大多数是通过ContentResolver对象实现对ContentProvider的操作</li>
-<li>ContentProvider使用URI来唯一标识其数据集，这里的URI以content://作为前缀，表示该数据由ContentProvider来管理</li>
-</ol>
-<h2 id="Handler机制"><a href="#Handler机制" class="headerlink" title="Handler机制"></a>Handler机制</h2><h3 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h3><p>通过Handler向消息队列添加消息</p>
-<h3 id="Looper"><a href="#Looper" class="headerlink" title="Looper"></a>Looper</h3><p>一个线程只能有一个Looper，子线程需要自己创建自己的Looper，Looper启动后会进入一个死循环，不断的从消息队列中取出消息交由Handler处理</p>
-<h3 id="MessageQueue"><a href="#MessageQueue" class="headerlink" title="MessageQueue"></a>MessageQueue</h3><p>消息队列中包含添加进去点的所有消息，由Looper来调度</p>
-<p><a href="https://github.com/zzhoujay" target="_blank" rel="external"><em>by zzhoujay</em></a></p>
+        <h3 id="FAT16文件系统简介"><a href="#FAT16文件系统简介" class="headerlink" title="FAT16文件系统简介"></a>FAT16文件系统简介</h3><p><a href="http://blog.csdn.net/yeruby/article/details/41978199" target="_blank" rel="external">链接</a></p>
+<h3 id="FAT16文件系统-DBR扇区介绍"><a href="#FAT16文件系统-DBR扇区介绍" class="headerlink" title="FAT16文件系统 DBR扇区介绍"></a>FAT16文件系统 DBR扇区介绍</h3><p><a href="http://wenku.baidu.com/link?url=KW-voc0XnYpBQv9tdLj0O8-bV2lrsx5T3cgyvxB6kSIP0ebn39E008Wvp43_dPsneB8eqPJTvHhvfhwphrVmBbmY-FiW1k-S15BdSWgRMO3" target="_blank" rel="external">链接</a></p>
+<h3 id="FAT表详解—图文详解"><a href="#FAT表详解—图文详解" class="headerlink" title="FAT表详解—图文详解"></a>FAT表详解—图文详解</h3><p><a href="http://blog.chinaunix.net/uid-25968088-id-3510583.html" target="_blank" rel="external">链接</a></p>
+<h3 id="FAT16文件结构与组织"><a href="#FAT16文件结构与组织" class="headerlink" title="FAT16文件结构与组织"></a>FAT16文件结构与组织</h3><p><a href="http://www.360doc.com/content/10/1214/13/3373961_78007296.shtml" target="_blank" rel="external">链接</a></p>
+<h3 id="FAT16文件系统格式说明"><a href="#FAT16文件系统格式说明" class="headerlink" title="FAT16文件系统格式说明"></a>FAT16文件系统格式说明</h3><p><a href="http://blog.chinaunix.net/uid-20255196-id-1712885.html" target="_blank" rel="external">链接</a></p>
+<h3 id="FAT32-数据区-根目录、子目录、目录项"><a href="#FAT32-数据区-根目录、子目录、目录项" class="headerlink" title="FAT32 数据区_根目录、子目录、目录项"></a>FAT32 数据区_根目录、子目录、目录项</h3><p><a href="http://blog.163.com/ourhappines@126/blog/static/121363154201311834528623/" target="_blank" rel="external">链接</a></p>
+<h3 id="目录项-类别解析"><a href="#目录项-类别解析" class="headerlink" title="目录项 类别解析"></a>目录项 类别解析</h3><p><a href="http://blog.163.com/ourhappines@126/blog/static/12136315420131183514119/" target="_blank" rel="external">链接</a></p>
+<p><em>by zzhoujay</em></p>
 
       
     </div>
@@ -335,7 +316,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
       
         <div class="post-tags">
           
-            <a href="/tags/知识点/" rel="tag">#知识点</a>
+            <a href="/tags/汇总/" rel="tag">#汇总</a>
           
         </div>
       
@@ -344,17 +325,13 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/30/Java面试知识点集锦/" rel="next" title="Java面试知识点集锦">
-                <i class="fa fa-chevron-left"></i> Java面试知识点集锦
+              <a href="/2016/05/02/2016校招编程题练习/" rel="next" title="2016校招编程题练习">
+                <i class="fa fa-chevron-left"></i> 2016校招编程题练习
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/02/2016校招编程题练习/" rel="prev" title="2016校招编程题练习">
-                2016校招编程题练习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -481,7 +458,7 @@ Service用于在执行后台任务（仍然是运行在主线程上的）
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#四大组件"><span class="nav-number">1.</span> <span class="nav-text">四大组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity"><span class="nav-number">1.1.</span> <span class="nav-text">Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service"><span class="nav-number">1.2.</span> <span class="nav-text">Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BroadcastReceiver"><span class="nav-number">1.3.</span> <span class="nav-text">BroadcastReceiver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentProvider"><span class="nav-number">1.4.</span> <span class="nav-text">ContentProvider</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handler机制"><span class="nav-number">2.</span> <span class="nav-text">Handler机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Handler"><span class="nav-number">2.1.</span> <span class="nav-text">Handler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Looper"><span class="nav-number">2.2.</span> <span class="nav-text">Looper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MessageQueue"><span class="nav-number">2.3.</span> <span class="nav-text">MessageQueue</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#FAT16文件系统简介"><span class="nav-number">1.</span> <span class="nav-text">FAT16文件系统简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAT16文件系统-DBR扇区介绍"><span class="nav-number">2.</span> <span class="nav-text">FAT16文件系统 DBR扇区介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAT表详解—图文详解"><span class="nav-number">3.</span> <span class="nav-text">FAT表详解—图文详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAT16文件结构与组织"><span class="nav-number">4.</span> <span class="nav-text">FAT16文件结构与组织</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAT16文件系统格式说明"><span class="nav-number">5.</span> <span class="nav-text">FAT16文件系统格式说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAT32-数据区-根目录、子目录、目录项"><span class="nav-number">6.</span> <span class="nav-text">FAT32 数据区_根目录、子目录、目录项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录项-类别解析"><span class="nav-number">7.</span> <span class="nav-text">目录项 类别解析</span></a></li></ol></div>
             
           </div>
         </section>
